@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            border: 0px;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+        }
+
+        .header {
+            display: inline-block;
+            margin-left: -70px;
+            padding-right: 80px;
+            padding-top: 15px;
+            margin-top: 0px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            height: 50px;
+            width: 100%;
+            text-align: end;
+            z-index: 4;
+
+        }
+
+        h3,
+        ul,
+        li {
+            display: inline-block;
+        }
+
+        ul {
+            margin-left: 550px;
+        }
+
+        li {
+            margin-left: 40px;
+        }
+
+        .header a {
+            cursor: pointer;
+            color: black;
+            text-decoration-line: none;
+        }
+
+        .header a:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(103, 17, 224);
+            padding: 10px;
+            border-radius: 40px;
+            margin-left: -20px;
+        }
+
+        #home {
+            background-color: rgb(255, 255, 255);
+            width: 500px;
+            margin-top: 100px;
+            margin-left: 230px;
+            padding: 20px;
+        }
+
+        #home img {
+            position: relative;
+            left: -30px;
+            margin-top: 20px;
+            padding-left: 30px;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        #home img:hover {
+            margin-top: -20px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .con {
+            color: white;
+            background-color: rgb(103, 17, 224);
+            position: absolute;
+            top: 550px;
+            padding: 15px;
+            border-radius: 30px;
+            text-decoration-line: none;
+        }
+
+        .con:hover {
+            background-color: white;
+            color: black;
+            border-width: 3px;
+            border-color: rgb(103, 17, 224);
+            border-style: solid;
+            font-weight: bold;
+        }
+
+        .myimg {
+            position: absolute;
+            left: 850px;
+            top: 160px;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: rgb(103, 17, 224);
+            color: white;
+            padding: 18px;
+            border-radius: 30px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            border-color: rgb(103, 17, 224);
+            border-style: solid;
+            border-width: 3px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: -10px;
+        }
+
+        #about {
+            margin-top: 180px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #about p {
+            margin-top: 40px;
+            margin-left: 490px;
+            margin-right: 80px;
+        }
+
+        #about img {
+            height: 300px;
+            width: 300px;
+            position: absolute;
+            top: 900px;
+            left: 90px;
+            border-radius: 60px 10px 60px;
+        }
+
+        #skills {
+            background-color: rgb(255, 255, 255);
+            margin-top: 180px;
+        }
+
+        #skills div {
+            padding: 15px;
+            color: white;
+            background-color: rgb(103, 17, 224);
+            border-radius: 40px 40px;
+            width: 350px;
+            margin-top: 60px;
+            margin-left: 60px;
+            display: inline-block;
+        }
+
+        #skills div img {
+            padding: 10px;
+            filter: invert();
+        }
+
+        #project {
+            margin-top: 180px;
+        }
+
+        #project div {
+            margin-top: 100px;
+            margin-left: 90px;
+            background-color: red;
+            display: inline-block;
+            height: 200px;
+            width: 350px
+        }
+
+        #contact {
+            margin-top: 200px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .box1 {
+            border: solid black 2px;
+            border-radius: 80px 80px;
+            margin-left: 420px;
+            margin-right: 410px;
+            margin-top: 40px;
+        }
+
+        #contact input {
+            padding: 20px;
+            font-size: 20px;
+            width: 300px;
+            margin-top: 20px;
+            border: solid black 0px;
+            border-bottom: solid black 1px;
+            outline: none;
+            background: transparent;
+        }
+
+        .copyrights {
+            margin-top: 100px;
+            border-top: solid black 1px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h3>Portfolio</h3>
+        <ul>
+            <li><a href="#home">Home </a></li>
+            <li><a href="#about">About</a> </li>
+            <li><a href="#skills">Skills</a> </li>
+            <li><a href="#project">Project</a> </li>
+            <li><a href="#contact">Contact</a> </li>
+        </ul>
+    </div>
+    <div id="home">
+        <br><br><br><br>
+        <h3>Hello, It's Me</h3>
+        <h1>Akash</h1>
+        <h4>Web Developer</h4>
+        <p style="margin-top: 10px;">Junior Web Developer | Fresher | I bring ideas to reality and design functionality.
+        </p>
+        <a href="https://github.com/vijayakash661"><img
+                src="https://i.ibb.co/0Qf45nZ/github-logo-png-github-logo-png-github-icon-png-transparent-png-kindpng-860x902-removebg-preview.png"
+                alt="github-logo-png-github-logo-png-github-icon-png-transparent-png-kindpng-860x902-removebg-preview"
+                border="0" height="40px" width="40px" /></a>
+        <a href="https://www.instagram.com/vijayakash661/"><img
+                src="https://i.ibb.co/f4XL0XX/image-removebg-preview.png" alt="image-removebg-preview" border="0"
+                height="37px" width="37px" /></a>
+        <a href="https://www.linkedin.com/in/akash---m/"><img
+                src="https://i.ibb.co/XXRGC2Q/10462330-removebg-preview.png" alt="10462330-removebg-preview" border="0"
+                height="40px" width="40px" /></a><br>
+        <a class="con" href="#contact">Contact Me</a>
+    </div>
+    <div class="myimg"> <br><br>
+        <img src="https://i.ibb.co/x1wHHZj/Round-Image.png" alt="Round-Image" height="370px" width="370px">
+    </div><br>
+    <div id="about">
+        <br><br><br><br>
+        <img src="https://i.ibb.co/89BrMmH/pic-design.png" alt="pic-design" border="0" />
+        <center>
+            <h1>About Me</h1>
+        </center>
+        <p> Passionate web development student with a solid grasp of HTML, CSS, and JavaScript. Eager to apply my skills
+            and gain hands-on experience through an internship. Committed to continuous learning and contributing to
+            innovative web projects. Ready to bring creativity and technical expertise to a dynamic team.</p>
+        <button style="margin-left: 600px; margin-top: 50px;"
+            onclick="location.href='https://drive.google.com/file/d/1YBg1nWx8ItADqioHSnnt800206vFXVOV/view';">Download CV</button>
+
+    </div>
+    <div id="skills"><br><br><br>
+        <center>
+            <h1>Skills</h1>
+        </center>
+        <div>
+            <center>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAYAAABXXxDfAAAAAXNSR0IArs4c6QAAA49JREFUaEPtmw1yEzEMhd2TACcBTgKcBDgJcBLgJHATyCtRx91Ylp4kZ3dIdqbTNvGPPkmWbMV5aDf8PNwwe7vD36r175YvtvzL1tr785gvWmv4H8+3099fnXN96fr9Pvf5SfR3TVNp+U+ttXed0FsBPp9eQBvP80sZB4r4cVYkfqeeCnhYFpZ6Y0hSAd9PwYw3FC0LD/cGuOdhhNUsv50HnvD2tMxkaXjkeGqTgYelvxOzrYDH9GEFROE94LI+RT8IeN51itiAYCkP5pPAOdI35npFGOKxaRR+5paMhRl5rdiCTPKBGTACD6t8VCbB+vNal5Gzb6vNT7t/BP7PjuAytaYAyvosvBbdV7m65h1YAgi22zhArX0WHmlNdm+9YOw4UZfv+2lB1730WKFHgY5ytQrq8xiwOuTZPm4vZOFH6x0R1rtnL2R/HAquv91ZIuDC+ubDwGuaRn4N7bBM6ewGo8C3BF5bY4wCbRyuxQjeHfQYwbVIz4zBodmtRzJdDd49kc0RapHyRsZqqfUVQrM7peIQAz/K8XulOVGLBu/K9Qz8kXJ87xOj9OvK9Qz80XK8KCCc673w2rZ2zxxvHXJM1/fAaxF17/Uu8Jp85hF3Bi8l6D3P7na8/9di5Pp4HQpABWlYNdbgtcFEGPcW0it9sp0W9WVYKAFnkGeFlgj8cKCk8BXdZxUmjH8RAyLwZiCpIAmOoQVmDHdx+ozAu3JoUPhMN6vAWQI/1GJG6qK+Vpxyw+O09FopWUkUpevkRZCjYWafHEnER7BzBbx+7zwqFOL9o+R5yKJ9jjCV0bPJKamU7mB10zgeeMitudURIn+4ouyFT1dKF1o+fNr0wmtbyCPs9MKnTQb+pis5qUrpIrfXTnSuozZj+VSldBF8qqLMwKcqpf8rvMvFFsGn4hBj+VSldBF8qqJcAb/nKS+c42EMBv6IuT6c4yPwWrVkj22uJos7BrGW19b9tXd6JRVlFl5zfbx+rbU/q9hQFyUi8LMLiKsVMAOnvS8CP7O+VHnktmXFnTwA4wdK1z5DGFZnrfQahdcKHLP5GK/wXjyW+Zixn2SMwmMAVgGMgAy8WbHRLJKBFwV47tqzAdELzyj0QgdZeFEATlez9VgNX/KpUQV8X+lFUMJXTUbfumCsNLK8lKDh5iVX3yrhe7eSO7H93VgI7BV6dLHQCt70+6vgaUH26HCH30PrR5jzpi3/F61D4kCZydjEAAAAAElFTkSuQmCC" /><br>
+                <h3>Programming Language</h3><br><br>
+                <p>Proficient in C, C++, and Java with a solid foundation in object-oriented programming. Skilled in
+                    writing efficient code and solving complex problems, eager to apply my expertise in a professional
+                    setting.</p>
+            </center>
+        </div>
+        <div>
+            <center>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAYAAABXXxDfAAAAAXNSR0IArs4c6QAAAx9JREFUaEPtmutRwzAQhJVOoBKgEqASoBKgEugEOoEsE80IcdI9pWiwPcMfYlv67rG3dnJIGz4OG2ZPO/xWs79nfs/8BiOwUtnfneL/nlL6nJGLleDfUkrXBTSC8JpSehkViJXgvwjIp+P/Hv87/EVK6YOAvDlWAypgyLFK5pHdB4Jw6P6G3lyRLgoeonepuIf61FXgUfIo/fIY2u9YaAX4Vr9vAh7jDWOuPoYnZvgCgkY8S7+vUva1ucG+MN4w5oYeK2R+urnJEY2Eh3BhVkOopN5ca26gD/iD5ZWu0ayeKPhStDQqrTE3ZaDQFvfeAETAUwDSAGjErtYGZB66YK4ALzwlVrnM4M64jUnNTW8dVIDpyc8KjxJ8rh5B697iNiU1NzgP8LUDrN2gWgcs8C1TUm5G8jSmNTcIdn7hQYmYWge08C2ByptBmSPjksdQTb/n++Oa204VqHRAA9/rO4sxsZobVAyqoNcGXMv9BFMCL+lvqbqX5eoxNyE6wMFH9Xfdo1pz0zIqLh3owUNccPPWoenv+h4ac8P5e7MOtOC5jHsfPCxi1wsCpwOkELbge6qOeQpB8RxSc6NZg9OBP6arBd/rJdU4IXYvNTcacJzLjeE/rC14LopYTDROCAKtuZEEgRvDZLX2BE8SAIw4ra2M7HfXGOZGHaLuGidE2qzmpr4VJ8o4v2uzJfC5n6JspcfclDaX+pIjfy4aw1J43JQbJxIdiDA3XH+Lx7AGHnBeHfCYG1d/U6qphc/3sOqAVezc/R0JL9EBarxYzQ11naq/o+F7OkB9yegxN612Eff3CPiWDlAjxmtu6gBYHqN/xcDa81Qgsw60Zqu138u1stJLXpOxzjASPldB641tpLmRvCabDt9bMMLcsECaE6Iz31o7wtxouETnzoL3mBsRiOWkc8IP/80NF5BZ8FZzw+3f9fkMeI+5ccFxF8+A95objsH8+Qz4CHNjBuxdOAM+ytyEB2AG/HLmJkdxBnz+Hc3V6WUIBDDEm3tLYQZ8vUfAc7/Y8HKJrj8HvGhjM07a4WdEecU19syvmJUZe9p05r8BFMLSQK90o0wAAAAASUVORK5CYII=" /><br>
+                <h3>Web Development</h3><br><br>
+                <p>Proficient in HTML, CSS, and JavaScript with a strong interest in web development.Dedicated to
+                    continuous learning and implementing best practices to deliver high-quality user experiences. </p>
+            </center>
+        </div>
+        <div>
+            <center>
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAA/CAYAAABXXxDfAAAAAXNSR0IArs4c6QAAA6JJREFUaEPtmgGS1SAMhtmTqCfRPYl6EvUk6klWT6KeRPdzmp2IUP4U6Ku2zLzZt/NS4EsCJKF36cTt7sTs6YI/q/Uvy+9g+ecpJT6v3FjPCuP+SCl9Xz5fZs9rluUBfZNSepkBR3lQBEr4OkMhI+EN+F2UMCCPMj4/yr8PPFMVHQGPK39c3HrEnJQ+zCM+LB6hPPOXTA88lgbar+NNk+h4qMsTtsID/NAx6dGPooT7qBdsgT8auCkyrIAoPK7+bbTZBvbHyYAHSC0Kj6vfco0rUG8fN99PimAU/qfS6Y1lZOtH4Ala2N2P3lj7L5RJ/o/wcEtcktCixX/F8hf85fYNDVxur7jIcr4fKaRdm7ZkVEloGeXo0Z0pgwCHQKfZIvB0duoI7+jWl6M7+TzM/IcqysxqTdNdKwJEdri7XPuLuD1WZwDa0RQgh7RecRF4sjmv1SNUcmChlOVrevk8q57UA0+nVrR8vXMNj7Frbk4YPjyltVJ06RixmjxKmJnvW80OOFuCuWVJuyWjSkJZYtMqFpgiqNmjsN5mwCy51mZmR7HEJQll8NGKqd3W8BeFWON/38ySW29tfAwicUlCGbytt2GXB52uUdp4JS5JqABv88Va7LbSBtMJWXq8duRKXJLQMupayXpPJSjXYhKXJLTAK6Gtv1gc6Q2Ri085xI3Cs6nkG9WaN+e3rLap1Y4p6xsv4zvX2NETY1pWN7qOhxIiymxtG6EwN2J5G/hocb1XCLc1rVjgSX4LvLLhtCw04/cQOBOIwPusjmeP4gF5jJ/Ps6roCHwpW7qlF9QizWmJDbClV0L2VEIrvOZEkm5qI5ZHo1Rw1l4C8EmNHVcj1reSzfmlKHFJQoXERn0Lwr9+RlLjk5xcKT4G4O0rmpLJWT/+GJa4JKFKYnPLmD5XXL75SlyS0EpiQzTV9UZU55qovQkmcUlCK/D8pK7HTs4/Hmf5sP/UQl+JSxISsjqbGWuUPH9kUmN9q/VCOcSNwCtZnTdPz6ujtjFaPTByTzAtsemN6vKsLk9sDLpnichhbsTyTOgotfqacvIa/qoSo/CmgGhe32NJ9dkQOJ1ugTcFWMSnTm6mXKucXhx7K7yPqtiMRhYkIkridAG8Vhka7vZ5h3vd1vhxLbrcBG0d9Vq+pAjzhNHXVq1sLuIxv2VHw/sJ+AzPJzjKJAHlQ4ITSW6Uvp9kZsKXJuL3htp1VZcrR+j3ho/MbbrsBT9dxQcd4NSW/wXh18ZAIPXtYwAAAABJRU5ErkJggg==" /><br>
+                <h3>Data structure and Algorithms</h3><br>
+                <p>Efficient problem-solver skilled in optimizing code through a strong understanding of data structures
+                    and algorithms. I excel in breaking down complex challenges into clear, logical solutions.</p>
+            </center>
+        </div>
+    </div>
+    <div id="project"><br><br><br>
+        <center>
+            <h1>Project</h1>
+        </center>
+        <div><img src="https://i.ibb.co/TBG3F3Z/Screenshot-2024-05-29-214333.png" alt="Screenshot-2024-05-29-214333"
+                border="0" height="200px" width="350px" />
+        </div>
+        <div><img
+                src="https://th.bing.com/th/id/R.fc94835859e4e790739968fd0f37559c?rik=wrYxnrzmPcWAOQ&riu=http%3a%2f%2fdigitalmarketingdeal.com%2fblog%2fwp-content%2fuploads%2f2018%2f11%2fevent-management-bg.jpg&ehk=v7JPV14TE6DcnN%2fZlJ4dKzm5JMH0FJYerx2ctp7fDYc%3d&risl=&pid=ImgRaw&r=0"
+                height="200px" width="350px"></div>
+        <div><img
+                src="https://cdn.dribbble.com/users/6217/screenshots/857102/home_2x.png?resize=400x300&vertical=center"
+                height="200px" width="350px"></div>
+    </div>
+    <div id="contact">
+        <br><br><br>
+        <center>
+            <h1 style="display: inline-block;">Contact </h1>&nbsp;&nbsp;<h1
+                style="display: inline-block; color: rgb(103, 17, 224) ;">Me</h1>
+
+            <div class="box1">
+                <center>
+                    <input type="text" placeholder="Enter Your Name"><br>
+                    <input type="email" placeholder="Email Address"><br>
+                    <input type="number" placeholder="Mobile Number"><br>
+                    <input type="text" placeholder="Your Message"><br><br>
+
+                </center>
+
+            </div><br>
+            <button style="width: 150px;">Submit</button>
+        </center>
+
+    </div>
+    <div class="copyrights">
+
+        <p>Copyright © 2024 by Akash | All Rights Reserved. </p>
+    </div>
+</body>
+
+</html>
